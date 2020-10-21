@@ -1,0 +1,43 @@
+{
+    "catFoods": [
+        {
+            "id": 1,
+            "name": "Нямушка", 
+            "description": "с фуа-гра",
+            "portionCount": "10 порций",
+            "gift": "мышь в подарок",
+            "customerIsGlad": false,
+            "inivitationText": "Печень утки разварная с артишоками.",
+            "invitationDisabled": "Печалька, с фуа-гра закончился",
+            "disabled": false,
+            "disabledWeight": 0.5,
+            "isSelected": false
+        },
+        {
+            "id": 2,
+            "name": "Нямушка", 
+            "description": "с рыбой",
+            "portionCount": "40 порций",
+            "gift": "2 мыши в подарок",
+            "customerIsGlad": false,
+            "inivitationText": "Головы щучьи с чесноком да свежайшая семгушка.",
+            "invitationDisabled": "Печалька, с рыбой закончился",
+            "disabled": true,
+            "disabledWeight": 2,
+            "isSelected": false
+        },
+        {
+            "id": 3,
+            "name": "Нямушка", 
+            "description": "с курой",
+            "portionCount": "100 порций",
+            "gift": "5 мышей в подарок",
+            "customerIsGlad": true,
+            "inivitationText": "Филе из цыплят с трюфелями в бульоне.",
+            "invitationDisabled": "Печалька, с курой закончился",
+            "disabled": false,
+            "disabledWeight": 5,
+            "isSelected": false
+        }
+    ]
+}

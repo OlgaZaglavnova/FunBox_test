@@ -1,0 +1,12 @@
+.cardsList{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 95px 70px 0px 70px;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 860px){
+    .cardsList{
+        justify-content: center;
+    }
+}
