@@ -9,16 +9,12 @@ import './Card.scss';
 export const Card_Component = ({food, setIsSelected}) => {
     const [preTitleText, setPreTitleText] = useState("Сказочное заморское яство");
     const [hovered, setHovered] = useState(false);
-    
-    // console.log('Card_Component food=', food, food.isSelected);
 
     //Обработка клика мыши на карточке
     const handleClick = () => {
         if(!food.disabled){
             setIsSelected({id: food.id, newIsSelected: !food.isSelected});
-            // console.log('handleClick food.isSelected', food.isSelected);
             reducePreTitle();
-            // setDefaultColors();
         } 
     };
 
@@ -54,22 +50,10 @@ export const Card_Component = ({food, setIsSelected}) => {
         setPreTitleText("Сказочное заморское яство");
     };
 
-    
-    // //Устанавливаем цвета в значения defaultHover или selectedHover в зависимости от значения isSelected
-    // const setHoverColors = () => {
-    //     console
-    //     setCardContentStyle(returnClassName()+"_content "+returnClassName()+"_content__hover");
-    //     setCardLeftTriangleStyle(returnClassName()+"_leftTriangle "+returnClassName()+"_leftTriangle__hover");
-    //     setCardWeightStyle(returnClassName()+"_weight "+returnClassName()+"_weight__hover");
-    //     setCardInvitationLinkStyle(returnClassName()+"_invitation__link "+returnClassName()+"_invitation__link__hover");
-    // };
-
     // Обработка события "ухода" мыши с карточки
     const handleOnMouseLeave = () => {
-        // console.log('handleOnMouseLeave isSelected', isSelected);
         reducePreTitle();
         if (!food.disabled){
-            // setHoverColors();
             setHovered(true);
             setTimeout(setHovered, 5000, false);
         }

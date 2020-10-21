@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import {CardsList_Component} from './CardsList_Component';
 
 const mapStateToProps = ({myReducer}, props) => {
-    //console.log('LanguageContainer', props);
     return {
         catFoods: myReducer.data.catFoods
     }
