@@ -1,11 +1,26 @@
 .cardsList{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 95px 70px 0px 70px;
+    padding: 14px 80px 0px 80px;
     flex-wrap: wrap;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content:space-between;
+    justify-content: space-between;
+    // margin-top: calc((100vh - 680px) / 2);
 }
-@media screen and (max-width: 860px){
+@media screen and (max-width: 768px){
     .cardsList{
         justify-content: center;
     }

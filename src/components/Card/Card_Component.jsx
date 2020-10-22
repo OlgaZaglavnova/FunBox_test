@@ -63,15 +63,23 @@ export const Card_Component = ({food, setIsSelected}) => {
 //функции для определения классов
     const getContentStyle = () => {
         let tmpStyle = food.isSelected ? "cardSelected_content" : "card_content";
-        return hovered ? tmpStyle + " " + tmpStyle + "__hover" : tmpStyle;
+        if (food.disabled){
+            return tmpStyle + " " + tmpStyle + "__disabled";
+        } else {
+            return hovered ? tmpStyle + " " + tmpStyle + "__hover" : tmpStyle;
+        }
     };
     const getLeftTriangleStyle = () => {
         let tmpStyle = food.isSelected ? "cardSelected_leftTriangle" : "card_leftTriangle";
-        return hovered ? tmpStyle + " " + tmpStyle + "__hover" : tmpStyle;
+        if (food.disabled){
+            return tmpStyle + " " + tmpStyle + "__disabled";
+        } else {
+            return hovered ? tmpStyle + " " + tmpStyle + "__hover" : tmpStyle;
+        }
     };
     const getPreTitleStyle = () => {
         let tmpStyle = food.isSelected ? "cardSelected_preTitle" : "card_preTitle";
-        return hovered ? tmpStyle + " " + tmpStyle + "__hover" : tmpStyle;
+        return preTitleText === "Сказочное заморское яство"? "card_preTitle" : hovered? tmpStyle + " " + tmpStyle + "__hover" : tmpStyle;
     };
     const getTitleStyle = () => {
         return food.isSelected ? "cardSelected_title" : "card_title";
@@ -87,7 +95,11 @@ export const Card_Component = ({food, setIsSelected}) => {
     };
     const getWeightStyle = () => {
         let tmpStyle = food.isSelected ? "cardSelected_weight" : "card_weight";
-        return hovered ? tmpStyle + " " + tmpStyle + "__hover" : tmpStyle;
+        if (food.disabled){
+            return tmpStyle + " " + tmpStyle + "__disabled";
+        } else {
+            return hovered ? tmpStyle + " " + tmpStyle + "__hover" : tmpStyle;
+        }
     };
     const getInvitationLinkStyle = () => {
         let tmpStyle = food.isSelected ? "cardSelected_invitation__link" : "card_invitation__link";
@@ -118,7 +130,7 @@ export const Card_Component = ({food, setIsSelected}) => {
                     {food.customerIsGlad ? "Заказчик доволен" : ""}
                 </div>
                 <div className={getWeightStyle()}>
-                    <div className="card_weight__nmbr">{food.disabled ? food.disabledWeight : "0,5"}</div>
+                    <div className="card_weight__nmbr">{food.disabledWeight}</div>
                     <div className="card_weight__unit">кг</div>
                 </div>
                 {food.disabled && <div className="card_disabled"></div>}

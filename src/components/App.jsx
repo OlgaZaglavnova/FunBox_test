@@ -12,9 +12,8 @@ class App extends React.Component{
      //
     render() {
         return <div className='app'>
-                <h2 className="app_title">Ты сегодня покормил кота?</h2>
                 <div className='app_shadow'>
-                    
+                    <h2 className="app_title">Ты сегодня покормил кота?</h2>
                     <CardsList />
                 </div>
             </div>

@@ -10,7 +10,7 @@
             "inivitationText": "Печень утки разварная с артишоками.",
             "invitationDisabled": "Печалька, с фуа-гра закончился",
             "disabled": false,
-            "disabledWeight": 0.5,
+            "disabledWeight": "0,5",
             "isSelected": false
         },
         {
@@ -22,8 +22,8 @@
             "customerIsGlad": false,
             "inivitationText": "Головы щучьи с чесноком да свежайшая семгушка.",
             "invitationDisabled": "Печалька, с рыбой закончился",
-            "disabled": true,
-            "disabledWeight": 2,
+            "disabled": false,
+            "disabledWeight": "2",
             "isSelected": false
         },
         {
@@ -35,8 +35,8 @@
             "customerIsGlad": true,
             "inivitationText": "Филе из цыплят с трюфелями в бульоне.",
             "invitationDisabled": "Печалька, с курой закончился",
-            "disabled": false,
-            "disabledWeight": 5,
+            "disabled": true,
+            "disabledWeight": "5",
             "isSelected": false
         }
     ]

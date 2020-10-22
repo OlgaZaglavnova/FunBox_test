@@ -3,7 +3,9 @@ $defaultColor: #1698D9;
 $defaultHoverColor: #2EA8E6;
 $selectedColor: #D91667;
 $selectedHoverColor: #E52E7A;
-$poligonSize: polygon(43px 0, 100% 0, 100% 100%, 0 100%, 0 43px);
+$disabledColor: #B3B3B3;
+$poligonWidth: 43px;
+$poligonSize: polygon($poligonWidth 0, 100% 0, 100% 100%, 0 100%, 0 $poligonWidth);
 
 //FONTS
 @font-face{
@@ -21,7 +23,12 @@ $poligonSize: polygon(43px 0, 100% 0, 100% 100%, 0 100%, 0 43px);
     font-style: normal;
     margin: 10px;
     position: relative;
+    
+    -webkit-clip-path: $poligonSize;
+    -o-clip-path: $poligonSize;
+    -ms-clip-path: $poligonSize;
     clip-path: $poligonSize;
+    display: inline-block;
 }
 @mixin card_content_style{
     width: 100%;
@@ -35,6 +42,7 @@ $poligonSize: polygon(43px 0, 100% 0, 100% 100%, 0 100%, 0 43px);
     position: relative;   
     padding-left: 51px;
     padding-top: 19px;
+    padding-right: 16px;
 }
 @mixin card_leftTriangle_style{
     position: absolute;
@@ -117,12 +125,18 @@ $poligonSize: polygon(43px 0, 100% 0, 100% 100%, 0 100%, 0 43px);
         &__hover{
             border-color: $defaultHoverColor;
         }
+        &__disabled{
+            border-color: $disabledColor;
+        }
     }
     &_leftTriangle{
         @include card_leftTriangle_style;
         background-color: $defaultColor;
         &__hover{
             background-color: $defaultHoverColor;
+        }
+        &__disabled{
+            background-color: $disabledColor;
         }
     }
     &_preTitle{
@@ -159,6 +173,9 @@ $poligonSize: polygon(43px 0, 100% 0, 100% 100%, 0 100%, 0 43px);
         &__hover{
             background-color:  $defaultHoverColor;
         }
+        &__disabled{
+            background-color: $disabledColor;
+        }
     }
     &_disabled{
         z-index: 10;
@@ -194,6 +211,7 @@ $poligonSize: polygon(43px 0, 100% 0, 100% 100%, 0 100%, 0 43px);
     }
     &_preTitle{
         @include card_preTitle_style;
+        color: $selectedColor;
         &__hover{
             color: $selectedHoverColor;
         }
